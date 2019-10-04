@@ -41,6 +41,16 @@ const siteContent = {
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+const navWordsAddOne = document.createElement('a');
+navWordsAddOne.textContent = "NavExtraOne";
+
+const navWordsAddTwo = document.createElement('a');
+navWordsAddTwo.textContent = "NavExtraTwo";
+
+const navSelector = document.querySelector(".container header nav");
+navSelector.appendChild(navWordsAddOne);
+navSelector.appendChild(navWordsAddTwo);
+
 const navWords = document.querySelectorAll('a');
 navWords[0].textContent = siteContent["nav"]["nav-item-1"];
 navWords[1].textContent = siteContent["nav"]["nav-item-2"];
@@ -48,6 +58,10 @@ navWords[2].textContent = siteContent["nav"]["nav-item-3"];
 navWords[3].textContent = siteContent["nav"]["nav-item-4"];
 navWords[4].textContent = siteContent["nav"]["nav-item-5"];
 navWords[5].textContent = siteContent["nav"]["nav-item-6"];
+
+for(let a = 0; a < navWords.length; a++){
+    navWords[a].style.color = "green";
+}
 
 const bigWords = document.querySelector(".container .cta .cta-text h1");
 bigWords.textContent = siteContent["cta"]["h1"];
@@ -58,13 +72,13 @@ getStartedButton.textContent = 'Get Started';
 const circleCodePic = document.querySelector('#cta-img');
 circleCodePic.setAttribute('src', siteContent["cta"]["img-src"]);
 
-const mainContentTitles = document.querySelectorAll(".container .main-content .top-content .text-content h4" );
-mainContentTitles[0].textContent = siteContent["main-content"]["features-h4"];
-mainContentTitles[1].textContent = siteContent["main-content"]["about-h4"];
+const mainContentTitlesTop = document.querySelectorAll(".container .main-content .top-content .text-content h4" );
+mainContentTitlesTop[0].textContent = siteContent["main-content"]["features-h4"];
+mainContentTitlesTop[1].textContent = siteContent["main-content"]["about-h4"];
 
-const mainContentFeaturesParagraph = document.querySelectorAll('.container .main-content .top-content .text-content p');
-mainContentFeaturesParagraph[0].textContent = siteContent["main-content"]["features-content"];
-mainContentFeaturesParagraph[1].textContent = siteContent["main-content"]["about-content"];
+const mainContentParagraphsTop = document.querySelectorAll('.container .main-content .top-content .text-content p');
+mainContentParagraphsTop[0].textContent = siteContent["main-content"]["features-content"];
+mainContentParagraphsTop[1].textContent = siteContent["main-content"]["about-content"];
 
 const middleImage = document.querySelector('#middle-img');
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
@@ -74,20 +88,18 @@ mainContentTitlesBottom[0].textContent = siteContent["main-content"]["services-h
 mainContentTitlesBottom[1].textContent = siteContent["main-content"]["product-h4"];
 mainContentTitlesBottom[2].textContent = siteContent["main-content"]["vision-h4"];
 
-const mainContentFeaturesParagraphBottom = document.querySelectorAll('.container .main-content .bottom-content .text-content p');
-mainContentFeaturesParagraphBottom[0].textContent = siteContent["main-content"]["services-content"];
-mainContentFeaturesParagraphBottom[1].textContent = siteContent["main-content"]["product-content"];
-mainContentFeaturesParagraphBottom[2].textContent = siteContent["main-content"]["vision-content"];
+const mainContentParagraphsBottom = document.querySelectorAll('.container .main-content .bottom-content .text-content p');
+mainContentParagraphsBottom[0].textContent = siteContent["main-content"]["services-content"];
+mainContentParagraphsBottom[1].textContent = siteContent["main-content"]["product-content"];
+mainContentParagraphsBottom[2].textContent = siteContent["main-content"]["vision-content"];
 
 const contactTitle = document.querySelector(".container .contact h4");
 contactTitle.textContent = siteContent["contact"]["contact-h4"];
 
-const contactParagraph = document.querySelectorAll(".container .contact p");
-contactParagraph[0].textContent = siteContent["contact"]["address"];
-contactParagraph[1].textContent = siteContent["contact"]["phone"];
-contactParagraph[2].textContent = siteContent["contact"]["email"];
+const contactParagraphs = document.querySelectorAll(".container .contact p");
+contactParagraphs[0].textContent = siteContent["contact"]["address"];
+contactParagraphs[1].textContent = siteContent["contact"]["phone"];
+contactParagraphs[2].textContent = siteContent["contact"]["email"];
 
 const footerSection = document.querySelector(".container footer p");
 footerSection.textContent = siteContent["footer"]["copyright"];
-
-
